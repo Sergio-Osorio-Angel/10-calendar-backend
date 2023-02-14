@@ -21,6 +21,9 @@ app.use(express.json());
 // Rutas auth // Crear, Login, Renew
 app.use('/api/auth', require('./routes/auth'));
 
+// Rutas events // Crear, Login, Renew
+app.use('/api/events', require('./routes/events'));
+
 
 // Escuchar peticiones
 app.listen(process.env.PORT, () => {

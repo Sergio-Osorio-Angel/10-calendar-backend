@@ -19,7 +19,7 @@ const validarJWT = (req, res = response, next) => {
         // Se modifica la request con los datos del JWT
         // Esto para que el controlador pueda manipular los datos del JWT
         req.uid = payload.uid;
-        req.uid = payload.name;
+        req.name = payload.name;
         
     } catch (error) {
         return res.status(401).json({
